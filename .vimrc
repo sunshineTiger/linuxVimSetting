@@ -12,7 +12,7 @@ nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
 map si :vsp<CR>
 map sn :sp<CR>
-set scrolloff=6 "距离底部6行就翻页
+set scrolloff=6
 set nocompatible  "屏蔽低版本vi
 set norelativenumber "相对行号
 set ruler " 显示标尺 
@@ -65,16 +65,16 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " " ==
 " " == NERDTree-git
 " " ==
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" let g:NERDTreeIndicatorMapCustom = {
+     \ "Modified"  : "✹",
+         \ "Staged"    : "✚",
+             \ "Untracked" : "✭",
+                 \ "Renamed"   : "➜",
+                     \ "Unmerged"  : "═",
+                         \ "Deleted"   : "✖",
+                            \ "Dirty"     : "✗",
+                                 \ "Clean"     : "✔︎",
+                                     \ "Unknown"   : "?"
+                                         \ }
 
 "----------NERDTree------------插件配置---------------------------

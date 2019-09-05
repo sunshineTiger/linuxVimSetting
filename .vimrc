@@ -48,6 +48,13 @@ set history=100
 set cursorline "在当前行显示下划线
 set noerrorbells "关闭vim提示错误音
 set foldmethod=manual
+"---------------Tlist-------------------------
+map tl :Tlist<CR>
+let Tlist_Show_One_File=1
+let Tlist_WinWidth=40
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window=0
+"---------------Tlist-------------------------
 ""----------NERDTree------------插件配置---------------------------
 map tt :NERDTreeMirror<CR>
 map tt :NERDTreeToggle<CR>

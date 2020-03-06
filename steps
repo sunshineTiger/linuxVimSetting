@@ -1,0 +1,25 @@
+sudo apt install python3-pip
+./configure --prefix=/usr/python3_6 --enable-shared CFLAGS=-fPIC
+pip3 install flake8
+sudo apt install cmake
+pip3 install nose
+pip3 install future
+pip3 install mock
+pip3 install chardet
+sudo pip3 install pytest
+sudo apt install python3-hamcrest 
+sudo pip3 install requests
+sudo pip3 install PyHamcrest
+
+./install.py --clangd-completer
+
+4. 解决pip3安装问题
+
+替换版本之后 pip3 install 时会提示错误subprocess.CalledProcessError: Command 'lsb_release -a' returned non-zero exit status 1., 重点关注lsb_release.py这个模块
+我们将python3.5中的lsb_release.py复制到python3.6中
+
+root@ubuntu:~# find / -name 'lsb_release.py'
+/usr/lib/python2.7/dist-packages/lsb_release.py
+/usr/lib/python3/dist-packages/lsb_release.py
+/usr/share/pyshared/lsb_release.py
+root@ubuntu:~# cp /usr/lib/python3/dist-packages/lsb_release.py /usr/local/lib/python3.6/
